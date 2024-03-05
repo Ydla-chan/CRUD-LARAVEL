@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\http\Controller\StudentController
+use App\http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +13,8 @@ use App\http\Controller\StudentController
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
 
 Route::get('/', function () {
     return redirect('/student');
