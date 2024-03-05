@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\http\Controller\StudentController
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/student');
 });
 
 
-Route::get('admin', function () {
-    return 'blabla datang';
-});
+Route::get('/student', [StudentController:: class,'index'])
+    ->name('student.index');
