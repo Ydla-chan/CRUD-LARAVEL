@@ -14,7 +14,7 @@ class StudentController extends Controller
     {
         // memanggil seluruh data dari table student
         $students= student::all();
-        return view('student.index', ['students'=> $student]);
+        return view('student.index', ['students'=> $students]);
     }
 
     /**
