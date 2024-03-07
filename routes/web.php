@@ -30,3 +30,5 @@ Route::POST('/student/add', [StudentController::class, 'create'])
     ->name('student.store');
 Route::get('/student/edit/{id}', [StudentController::class, 'edit'])
     ->name('student.edit');
+Route::delete('/student/delete/{id}', [StudentController::class, 'destroy'])
+     ->name('student.destroy');
