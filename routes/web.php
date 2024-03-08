@@ -29,14 +29,9 @@ Route::post('/student/add', [StudentController::class, 'store'])
 
 Route::get('/student/edit/{id}', [StudentController::class, 'edit'])
     ->name('student.edit');
-<<<<<<< HEAD
 
 Route::put('/student/edit/{id}', [StudentController::class, 'update'])
     ->name('student.update');
 
 Route::delete('/student/delete/{id}', [StudentController::class, 'destroy'])
     ->name('student.destroy');
-=======
-Route::delete('/student/delete/{id}', [StudentController::class, 'destroy'])
-     ->name('student.destroy');
->>>>>>> ce6584fda732aac7781a187f7bcf83b2d0d42fc7
