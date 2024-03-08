@@ -146,6 +146,7 @@ return view('student.edit', ['student' => $student->first()]);
      */
     public function destroy(string $id)
     {
+<<<<<<< HEAD
         $student = Student::where('nim', $id);
 
         if ($student->first()->delete()) {
@@ -160,5 +161,36 @@ return view('student.edit', ['student' => $student->first()]);
                 'type'=> 'error',
             ]);
         }
+=======
+      $student = Student::where(['nim' => $id]);
+
+      if ($student->first()->delete()) {
+        return redirect('/student')->with([
+            'notifikasi' => 'Data Berhasil dihapus !',
+            'type' => 'success'
+        ]);
+      } else {
+          return redirect()->back()->with([
+            'notifikasi'=> 'Data gagal dihapus',
+            'type' => 'error'
+          ]);
+      }
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+        //
+>>>>>>> ce6584fda732aac7781a187f7bcf83b2d0d42fc7
     }
 }
