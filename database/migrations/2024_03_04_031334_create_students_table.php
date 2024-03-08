@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('prodi');	
             $table->timestamps('updated_at');
             $table->timestamps('created_at');
-           
         });
     }
 
